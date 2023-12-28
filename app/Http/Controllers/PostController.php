@@ -8,13 +8,11 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(Post $post)
-<<<<<<< HEAD
     {
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit(1)]);
     }
-=======
+    public function show(Post $post)
    {
-    return $post->get();
+        return view('posts/show')->with(['post' => $post]);
    }
->>>>>>> origin/master
 }
