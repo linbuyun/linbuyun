@@ -25,7 +25,7 @@ class PostController extends Controller
     }
     public function edit(Post $post)
     {
-        return view('posts/edit')->with(['post' => $post]);
+        return view('posts.edit')->with(['post' => $post]);
     }
     public function update(PostRequest $request, Post $post)
     {
