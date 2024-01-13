@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<x-app-layout>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -13,9 +14,11 @@
         <a href="/posts/create">create</a>
         <div class='posts'>
             @foreach($posts as $post)
+            <br/>
+            <br/>
                 <div class='post'>
                  <a href="/posts/{{ $post->id }}"><h2 class='title'>{{ $post->title }}></h2></a>
-                 <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+                 <p>category:<a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a></p>
                  <p class='body'>{{ $post->body }}</p>
                  <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                        @csrf
@@ -37,3 +40,6 @@
         </script>
     </body>
 </html>
+  <br/>
+  {{ Auth::user()->name }}
+</x-app-layout>
