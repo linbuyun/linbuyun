@@ -13,5 +13,6 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [PostController::class, 'calcluate']);
 Route::get('/posts/{post}',[PostController::class, 'show']);
+Route::get('/calculate', [PostController::class, 'calcluate']);
