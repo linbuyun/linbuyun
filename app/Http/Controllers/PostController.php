@@ -23,6 +23,12 @@ class PostController extends Controller
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
     }
+    public function calculate(Request $request)
+    {
+        $data['exchange'] = $request->input('usdoller');
+        $data['jpyen'] = ($data['exchange'] * 110);
+        return view('posts/calculate', $data);
+    }
     public function edit(Post $post)
     {
         return view('posts.edit')->with(['post' => $post]);
