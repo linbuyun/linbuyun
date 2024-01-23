@@ -15,10 +15,11 @@ class PostController extends Controller
    {
         return view('posts/show')->with(['post' => $post]);
    }
-    public function calcluate(Request $request)
+    public function calcluate(Request $request)//web.php-control(calculate)
    {
-        $data['exchange'] = $request->input('usdoller');
-        $data['jpyen'] = ($data['exchange'] * 110);
-        return view('posts/calculate', $data);
+        $data['water'] = $request->input('w');
+        $data['w/c'] = $request->input('wc');
+        $data['Vcement'] = ($data['water'] / ($data['w/c'] * 0.01));
+        return view('posts/calculate', $data); //返回blade的位置
    }
 }

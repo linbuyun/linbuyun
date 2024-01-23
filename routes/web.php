@@ -13,6 +13,6 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::class, 'calcluate']);
+Route::get('/', [PostController::class, 'calcluate']);//url地址
 Route::get('/posts/{post}',[PostController::class, 'show']);
 Route::get('/calculate', [PostController::class, 'calcluate']);

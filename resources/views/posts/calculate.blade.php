@@ -9,15 +9,56 @@
     
     </head>
     <body class="antialiased">
-        <h1>Blog Name</h1>
-       <div class="content">
-                <div class="title m-b-md">
-                    Larave3
+        <h1>調合設計</h1>
+        
+        
+    <form>
+            @csrf
+        <div style="display:inline-flex">
+                <div class="title">
+                <h3>単位水量</h3>
+                <input type="text" name="w" placeholder="180" style="height: 30px; width: 120px;margin-right: 20px" >
                 </div>
-            <form>
-            <input type="text" name="usdoller" placeholder="$0" style="height: 30px; width: 120px;">
-            <button type="submit">円に換算</button>
-            </form>
-             <p>日本円で{{ number_format(($jpyen))}}円です</p>
+                
+                <div class="title">
+                <h3>水セメント比</h3>
+                <input type="text" name="wc" placeholder="55" style="height: 30px; width: 120px;margin-right: 20px" >
+                </div>
+                
+                <div class="title">
+                <h3>細骨材率</h3>
+                <input type="text" name=sa placeholder="53" style="height: 30px; width: 120px;margin-right: 20px" >
+                </div>
+                
+                <div class="title">
+                <h3>単位水量</h3>
+                <input type="text" name=wer placeholder="180" style="height: 30px; width: 120px;margin-right: 20px" >
+                </div>
+                
+                <div class="title">
+                <h3>単位水量</h3>
+                <input type="text" name=erqw placeholder="180" style="height: 30px; width: 120px;margin-right: 20px" >
+                </div>
+                
+                <div>
+                <button type="submit" style="height: 30px; width: 150px;margin-top: 66px">コンクリート計算</button>
+                </div>
+    </form>
+       </div>
+     
+                
+            　　<form>
+            　　<input type="text" name="we" placeholder="$0" style="height: 30px; width: 120px;">
+            　　
+            　　</form>
+        
+     <br/>
+     <div style="display:inline-flex">
+     <p>日本円で{{ $Vcement }}円です</p>
+    
+     </div>
+             
+            
     </body>
+     
 </html>
