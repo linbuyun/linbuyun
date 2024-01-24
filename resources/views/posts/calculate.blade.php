@@ -9,7 +9,7 @@
     
     </head>
     <body class="antialiased">
-        <h1>調合設計</h1>
+        <h1>コンクリート調合設計</h1>
         
         
     <form>
@@ -55,12 +55,20 @@
         
      <br/>
    
-     <p>水は：{{ $needwater }}&nbsp;g</p>
+     <p>水合計は：{{ $needwater }}&nbsp;g</p>
+     <p>砂加水は：{{ $addwsand }}&nbsp;g</p>
+     <p>石加水は：{{ $addwgravel }}&nbsp;g</p>
      <p>セメントは：{{ $needcement }}&nbsp;g</p>
-     <p>砂は：{{ $needsand }}&nbsp;g</p>
-     <p>石は：{{ $needgravel }}&nbsp;g</p>
+     <p>絶乾砂は：{{ $needsand }}&nbsp;g</p>
+     <p>絶乾石は：{{ $needgravel }}&nbsp;g</p>
      <p>減水剤は{{ $needaes }}&nbsp;g</p>
      <p>AE剤は{{ $needaem }}&nbsp;g</p>
+     
+     <br/>
+     <br/>
+     <div class='footer'>
+            <a href="/">戻る</a>
+        </div>
 
              
             

@@ -14,5 +14,5 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', [PostController::class, 'index']);
-Route::get('/calculate', [PostController::class, 'calcluate']);//url地址
+Route::get('/calculate', [PostController::class, 'calculate']);//url地址
 Route::get('/posts/{post}',[PostController::class, 'show']);
