@@ -27,17 +27,22 @@
                 
                 <div class="title">
                 <h3>細骨材率</h3>
-                <input type="text" name=sa placeholder="53" style="height: 30px; width: 120px;margin-right: 20px" >
+                <input type="text" name="sa" placeholder="53" style="height: 30px; width: 120px;margin-right: 20px" >
                 </div>
                 
                 <div class="title">
-                <h3>単位水量</h3>
-                <input type="text" name=wer placeholder="180" style="height: 30px; width: 120px;margin-right: 20px" >
+                <h3>減水剤</h3>
+                <input type="text" name="aes" placeholder="20" style="height: 30px; width: 120px;margin-right: 20px" >
                 </div>
                 
                 <div class="title">
-                <h3>単位水量</h3>
-                <input type="text" name=erqw placeholder="180" style="height: 30px; width: 120px;margin-right: 20px" >
+                <h3>AE剤</h3>
+                <input type="text" name="aem" placeholder="20" style="height: 30px; width: 120px;margin-right: 20px" >
+                </div>
+                
+                <div class="title">
+                <h3>必要量</h3>
+                <input type="text" name="need" placeholder="20" style="height: 30px; width: 120px;margin-right: 20px" >
                 </div>
                 
                 <div>
@@ -46,17 +51,17 @@
     </form>
        </div>
      
-                
-            　　<form>
-            　　<input type="text" name="we" placeholder="$0" style="height: 30px; width: 120px;">
-            　　
-            　　</form>
+   
         
      <br/>
-     <div style="display:inline-flex">
-     <p>日本円で{{ $Vcement }}円です</p>
-    
-     </div>
+   
+     <p>水は：{{ $needwater }}&nbsp;g</p>
+     <p>セメントは：{{ $needcement }}&nbsp;g</p>
+     <p>砂は：{{ $needsand }}&nbsp;g</p>
+     <p>石は：{{ $needgravel }}&nbsp;g</p>
+     <p>減水剤は{{ $needaes }}&nbsp;g</p>
+     <p>AE剤は{{ $needaem }}&nbsp;g</p>
+
              
             
     </body>

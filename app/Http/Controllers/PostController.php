@@ -19,7 +19,27 @@ class PostController extends Controller
    {
         $data['water'] = $request->input('w');
         $data['w/c'] = $request->input('wc');
-        $data['Vcement'] = ($data['water'] / ($data['w/c'] * 0.01));
+        $data['s/a'] = $request->input('sa');
+        $data['aes'] = $request->input('aes');
+        $data['aem'] = $request->input('aem');
+        $data['need'] = $request->input('need');
+        if(!$request->input('wc')){
+        $data['w/c'] = 1;
+        }
+        $data['Mcement'] = ($data['water'] / ($data['w/c'] * 0.01));
+        $data['Vcement'] = ($data['Mcement'] / 3.16);
+        $data['Vsand'] = ((1000-$data['Vcement']-45-$data['water'])*$data['s/a']*0.01);
+        $data['Vgravel'] = ((1000-$data['Vcement']-45-$data['water'])*(1-$data['s/a']*0.01));
+        $data['Mgravel'] = ($data['Vgravel']*2.61);
+        $data['Msand'] = ($data['Vsand']*2.63);
+        $data['needcement'] = ($data['Mcement']* $data['need']);
+        $data['needsand'] = ($data['Msand']* $data['need']);
+        $data['needgravel'] = ($data['Mgravel']* $data['need']);
+        $data['needaes'] = ($data['aes']*$data['needcement']*0.01);
+        $data['needaem'] = ($data['aem']*$data['needcement']);
+        $data['needwater'] = ($data['water']* $data['need']-$data['needaes']-$data['needaem']);
         return view('posts/calculate', $data); //返回blade的位置
-   }
+       
+     
+ }
 }
