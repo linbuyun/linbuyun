@@ -9,14 +9,9 @@
     
     </head>
     <body class="antialiased">
-        <h1>Blog Name</h1>
+        <h1>調合設計</h1>
        <div class="content">
-                <div class="title m-b-md">
-                    Larave3
-                </div>
-            <form>
-            <input type="text" name="usdoller" placeholder="$0" style="height: 30px; width: 120px;">
-            <button type="submit">円に換算</button>
-            </form>
+                <a href="/calculate">コンクリートはこちら</a>
+       
     </body>
 </html>
