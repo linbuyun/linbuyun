@@ -16,3 +16,5 @@ use App\Http\Controllers\PostController;
 Route::get('/', [PostController::class, 'index']);
 Route::get('/calculate', [PostController::class, 'calculate']);//url地址
 Route::get('/posts/{post}',[PostController::class, 'show']);
+Route::get('/mortar', [PostController::class, 'mortar']);
+Route::get('/sconcrete', [PostController::class, 'sconcrete']);

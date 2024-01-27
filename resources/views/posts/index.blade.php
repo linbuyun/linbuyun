@@ -11,7 +11,10 @@
     <body class="antialiased">
         <h1>調合設計</h1>
        <div class="content">
-                <a href="/calculate">コンクリートはこちら</a>
-       
+                <a href="/calculate">普通コンクリートはこちら</a>
+                <br/>
+                <a href="/mortar">モルタルはこちら</a>
+                <br/>
+                <a href="/sconcrete">特殊コンクリートはこちら</a>
     </body>
 </html>

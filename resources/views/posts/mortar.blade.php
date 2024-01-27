@@ -9,7 +9,7 @@
     
     </head>
     <body class="antialiased">
-        <h1>普通コンクリート調合設計</h1>
+        <h1>モルタル調合設計</h1>
         
         
     <form>
@@ -26,8 +26,18 @@
                 </div>
                 
                 <div class="title">
-                <h3>細骨材率</h3>
-                <input type="text" name="sa" placeholder="53" style="height: 30px; width: 120px;margin-right: 20px" >
+                <h3>置換率</h3>
+                <input type="text" name="replace" placeholder="30" style="height: 30px; width: 120px;margin-right: 20px" >
+                </div>
+                
+                <div class="title">
+                <h3>細骨材密度</h3>
+                <input type="text" name="density" placeholder="2.94" style="height: 30px; width: 120px;margin-right: 20px" >
+                </div>
+                
+                <div class="title">
+                <h3>細骨材吸水率</h3>
+                <input type="text" name="absorption" placeholder="1.21" style="height: 30px; width: 120px;margin-right: 20px" >
                 </div>
                 
                 <div class="title">
@@ -42,11 +52,11 @@
                 
                 <div class="title">
                 <h3>必要量</h3>
-                <input type="text" name="need" placeholder="20" style="height: 30px; width: 120px;margin-right: 20px" >
+                <input type="text" name="need" placeholder="2" style="height: 30px; width: 120px;margin-right: 20px" >
                 </div>
                 
                 <div>
-                <button type="submit" style="height: 30px; width: 150px;margin-top: 66px">コンクリート計算</button>
+                <button type="submit" style="height: 30px; width: 150px;margin-top: 66px">モルタル計算</button>
                 </div>
     </form>
        </div>
@@ -57,10 +67,10 @@
    
      <p>水合計は：{{ number_format($needwater, 2) }}&nbsp;g</p>
      <p>砂加水は：{{ number_format($addwsand, 2) }}&nbsp;g</p>
-     <p>石加水は：{{ number_format($addwgravel, 2) }}&nbsp;g</p>
+     <p>特殊骨材加水は：{{ number_format($addwspecial, 2) }}&nbsp;g</p>
      <p>セメントは：{{ number_format($needcement, 2) }}&nbsp;g</p>
      <p>絶乾砂は：{{ number_format($needsand, 2) }}&nbsp;g</p>
-     <p>絶乾石は：{{ number_format($needgravel, 2) }}&nbsp;g</p>
+     <p>絶乾特殊骨材は：{{ number_format($needspecial, 2) }}&nbsp;g</p>
      <p>減水剤は{{ number_format($needaes, 2) }}&nbsp;g</p>
      <p>AE剤は{{ number_format($needaem, 2) }}&nbsp;g</p>
      
